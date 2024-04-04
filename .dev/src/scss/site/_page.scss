@@ -1,0 +1,898 @@
+.hero {
+	background: url("../assets/bg-hero.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 871px;
+	padding-top: 250px;
+	position: relative;
+	z-index: 2;
+	@media (max-width: 1600px) {
+		height: 670px;
+		padding-top: 150px;
+	}
+	&__container {
+		max-width: 1240px;
+		margin: 0 auto;
+		overflow: hidden;
+		.blue-img {
+			position: absolute;
+			top: 0;
+		}
+	}
+}
+
+.storiesHolder {
+	padding-top: 80px;
+	.stories {
+		padding-top: 0;
+		max-width: 700px;
+		margin: 0 auto;
+		text-align: center;
+		.story {
+			margin: 0 20px;
+			width: 100%;
+			max-width: 128px;
+			height: 100%;
+			.item-link {
+				.item-preview {
+					width: 99px;
+					height: 99px;
+					max-height: 99px;
+					border: 3px solid var(--cat-s);
+				}
+				.info {
+					display: block;
+					text-overflow: unset;
+					color: #51758d;
+					overflow: unset;
+					height: 100%;
+					word-wrap: break-word;
+					@include general-text;
+					max-width: 100px;
+					.name {
+						font-weight: 700;
+					}
+					strong {
+						max-width: 100%;
+						display: block;
+						word-wrap: break-word;
+					}
+				}
+			}
+		}
+	}
+}
+
+.content {
+	padding-top: 80px;
+	position: relative;
+	margin-bottom: 158px;
+	.container {
+		display: grid;
+		max-width: 1118px;
+		padding: 0;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 0.9fr 0.9fr 1.2fr;
+		gap: 20px 20px;
+		grid-template-areas:
+			"apostilas teste teste"
+			"apostilas redacao redacao"
+			"simulado guias tutoria";
+
+		.card {
+			padding: 25px;
+			border-radius: 24px;
+			.small-category {
+				margin-bottom: 22px;
+			}
+			.general-text {
+				color: #fff;
+				font-size: 16px;
+			}
+		}
+	}
+
+	.apostilas {
+		grid-area: apostilas;
+		background: url("../assets/bg-apostilas.png");
+		background-repeat: no-repeat;
+		position: relative;
+
+		&::after {
+			content: url("../assets/mask-card-white.svg");
+			position: absolute;
+			bottom: -8px;
+			width: 101%;
+			left: -1px;
+		}
+		.small-category {
+			color: #136971;
+		}
+
+		.button--container {
+			position: relative;
+			z-index: 3;
+			margin-top: 140px;
+		}
+	}
+
+	.teste {
+		grid-area: teste;
+		background: var(--azul);
+		position: relative;
+		&::before {
+			position: absolute;
+			content: url("../assets/woman-lupa.svg");
+			right: 75px;
+			top: 0;
+			z-index: 2;
+		}
+		&::after {
+			content: url("../assets/mask-card-white-r.svg");
+			position: absolute;
+			width: 100%;
+			right: -2px;
+			max-width: 327px;
+			top: -1px;
+		}
+		.small-category {
+			color: #005589;
+		}
+		.general-text {
+			max-width: 396px;
+			@include general-text;
+			margin-bottom: 23px;
+			font-size: 16px;
+		}
+		.button--container {
+			max-width: 210px;
+		}
+	}
+
+	.redacao {
+		grid-area: redacao;
+		background: var(--rosa);
+		position: relative;
+		margin-top: 26px;
+		&::after {
+			content: url("../assets/onda-red.svg");
+			position: absolute;
+			right: -1px;
+			top: 0;
+		}
+		&::before {
+			content: url("../assets/prancheta.svg");
+			position: absolute;
+			z-index: 4;
+			right: -30px;
+			top: -30px;
+		}
+		.small-category {
+			color: #49002a;
+		}
+		.general-text {
+			max-width: 540px;
+		}
+		.button--container {
+			max-width: 230px;
+		}
+	}
+
+	.simulado {
+		grid-area: simulado;
+		background: var(--amarelo);
+		overflow: hidden;
+		&::after {
+			content: url("../assets/ondas.svg");
+			position: absolute;
+			left: 0;
+			top: 80px;
+		}
+
+		.small-category {
+			color: #4e4310;
+			margin-bottom: 40px !important;
+		}
+		.arrow-link {
+			position: absolute;
+			right: 18px;
+			top: 30px;
+		}
+		.general-text {
+			color: #4e4310 !important;
+		}
+		.enem {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 100px;
+		}
+		.button {
+			padding: 14px 30px;
+			border-radius: 40px;
+			&--container {
+				margin-top: 54px;
+			}
+		}
+	}
+
+	.guias {
+		grid-area: guias;
+		position: relative;
+		background: rgba(255, 89, 140, 0.4);
+		&::before {
+			content: url("../assets/estudo-bg.png");
+			position: absolute;
+			left: 0;
+			top: 0;
+			max-width: 100%;
+			z-index: 2;
+		}
+		&::after {
+			content: url("../assets/onda-red-b.svg");
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+		}
+
+		.arrow-link {
+			position: absolute;
+			right: 18px;
+			top: 30px;
+			z-index: 3;
+		}
+		.small-category {
+			color: #71132f;
+			position: relative;
+			z-index: 3;
+		}
+		.general-text {
+			position: relative;
+			z-index: 3;
+		}
+	}
+
+	.tutoria {
+		grid-area: tutoria;
+		background: #a4be4b;
+		padding: 25px 40px !important;
+		&::before {
+			content: url("../assets/sticker-two-f.svg");
+			right: -50px;
+			position: absolute;
+			bottom: -50px;
+		}
+		&::after {
+			content: url("../assets/onda-red-b.svg");
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+			z-index: 1;
+		}
+		.small-category {
+			color: #516511;
+			position: relative;
+			z-index: 2;
+			&::before {
+				content: url("../assets/check.svg");
+				position: absolute;
+				z-index: -1;
+				left: -20px;
+			}
+		}
+		.arrow-link {
+			position: absolute;
+			right: 18px;
+			top: 30px;
+			z-index: 3;
+		}
+	}
+}
+
+.noticias {
+	margin-bottom: 53px;
+	.default__container {
+		&::before {
+			content: url("../assets/noticias.svg");
+		}
+	}
+
+	.container-not {
+		display: grid;
+		max-width: 1120px;
+		margin: 0 auto;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 20px;
+		grid-auto-flow: row;
+		grid-template-areas:
+			"principal principal secundaria secundaria"
+			"principal principal terciaria terciaria-2";
+	}
+	&__card-title {
+		margin: 0;
+		position: absolute;
+		left: 22px;
+		bottom: 20px;
+		color: var(--texto-neutro);
+		@include general-text;
+		font-size: 30px;
+		line-height: 36px;
+		font-weight: 900;
+		z-index: 3;
+	}
+
+	.card {
+		position: relative;
+		border: none;
+		border-radius: 24px;
+		&::before {
+			content: url(../assets/onda-pequena.svg);
+			position: absolute;
+			bottom: -6px;
+		}
+		&.principal {
+			.noticias__card-title {
+				max-width: 508px;
+				overflow: auto;
+				max-height: 72px;
+			}
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 24px;
+		}
+		&.roxo {
+			.noticias__card-title {
+				max-height: 108px;
+				overflow: auto;
+			}
+		}
+		&.secundaria {
+			.noticias__card-title {
+				max-width: 460px;
+				overflow: auto;
+				max-height: 72px;
+			}
+		}
+		.category {
+			position: absolute;
+			display: block;
+			left: 22px;
+			top: 22px;
+			text-decoration: none;
+			@include text-button;
+			padding: 9px 15px;
+			border-radius: 80px;
+			&.yellow {
+				color: #564909;
+				background: var(--cat-p);
+			}
+			&.rosa {
+				color: #49002a;
+				background: var(--cat-s);
+			}
+			&.roxa {
+				color: #131b71;
+				background: var(--cat-t);
+			}
+		}
+	}
+	.secundaria {
+		grid-area: secundaria;
+		&::before {
+			content: url(../assets/onda-media.svg);
+			position: absolute;
+			bottom: -6px;
+		}
+	}
+
+	.terciaria {
+		grid-area: terciaria;
+	}
+
+	.terciaria-2 {
+		grid-area: terciaria-2;
+	}
+
+	.principal {
+		grid-area: principal;
+		&::before {
+			content: url(../assets/onda-grande.svg);
+			position: absolute;
+			bottom: -6px;
+		}
+		.noticias__card-title {
+			bottom: 65px;
+		}
+		.noticias__card-desc {
+			position: absolute;
+			bottom: 15px;
+			@include general-text;
+			color: var(--texto-neutro);
+			font-size: 16px;
+			left: 22px;
+		}
+	}
+}
+
+.foruns {
+	margin-bottom: 63px;
+	.default__container {
+		&::before {
+			content: url("../assets/foruns.svg");
+		}
+		.divider {
+			max-width: 100%;
+		}
+	}
+	&__container {
+		max-width: 1120px;
+		margin: 0 auto;
+		padding: 28px 23px 27px;
+		background: var(--rosa);
+		border-radius: 24px;
+		display: flex;
+		justify-content: end;
+		position: relative;
+		&::before {
+			content: url("../assets/foruns-bg.svg");
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		&::after {
+			content: url("../assets/woman-lupa.svg");
+			position: absolute;
+			left: 0;
+			top: -30px;
+		}
+	}
+	&__content {
+		max-width: 447px;
+		&::before {
+			content: url("../assets/mulher-pc.svg");
+			position: absolute;
+			left: 250px;
+			top: 0px;
+		}
+		.general-text {
+			font-size: 20px;
+			font-weight: 600;
+			color: #49002a;
+		}
+		.small-category {
+			font-size: 32px;
+			line-height: 32px;
+			margin: 20px 0;
+			color: var(--texto-neutro);
+		}
+		.button--container {
+			max-width: 207px;
+		}
+	}
+}
+
+.artigos {
+	.default__container {
+		&::before {
+			content: url("../assets/artigos.svg");
+		}
+		.divider {
+			max-width: 100%;
+		}
+	}
+	margin-bottom: 110px;
+	.container-artigos {
+		max-width: 1120px;
+		margin: 0 auto;
+
+		.slick-list {
+			margin: 0 -10px;
+			padding: 20px 0px;
+		}
+
+		.card {
+			border-radius: 24px;
+			padding-bottom: 40px;
+			width: 100%;
+			margin: 0 10px;
+			@include l-shadow;
+			position: relative;
+			overflow: hidden;
+			img {
+				width: 358px;
+				height: 328px;
+				object-fit: cover;
+			}
+			&::before {
+				content: url("../assets/mask-card-white-a.svg");
+				position: absolute;
+				bottom: 65px;
+			}
+			&.yellow {
+				.date,
+				.time-reading {
+					color: #ad965c;
+				}
+				.artigos__title {
+					color: #725c26;
+				}
+			}
+			&.rosa {
+				.date,
+				.time-reading {
+					color: #ad5c8c;
+				}
+				.artigos__title {
+					color: #722652;
+				}
+			}
+			&.roxo {
+				.date,
+				.time-reading {
+					color: #5c63ad;
+				}
+				.artigos__title {
+					color: #262d72;
+				}
+			}
+			.artigos__title {
+				@include general-text;
+				font-size: 24px;
+				font-weight: 700;
+				line-height: 28px;
+				margin-bottom: 23px;
+				max-height: 140px;
+				overflow: auto;
+			}
+			.date,
+			.time-reading {
+				@include general-text;
+				font-weight: 400;
+			}
+			.date,
+			.artigos__title,
+			.time-reading {
+				padding: 0 23px;
+				position: relative;
+				z-index: 2;
+			}
+			.category {
+				position: absolute;
+				display: block;
+				left: 22px;
+				top: 22px;
+				text-decoration: none;
+				@include text-button;
+				padding: 9px 15px;
+				border-radius: 80px;
+				color: var(--texto-neutro);
+				&.yellow {
+					background: #ffb800;
+				}
+				&.rosa {
+					background: var(--cat-s);
+				}
+				&.roxa {
+					background: var(--cat-t);
+				}
+			}
+		}
+	}
+}
+
+.auloes {
+	margin-bottom: 177px;
+	.default__container {
+		&::before {
+			content: url("../assets/aulos.svg");
+		}
+		.divider {
+			max-width: 313px;
+		}
+	}
+	&__container {
+		max-width: 1120px;
+		margin: 0 auto;
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+
+		.card {
+			background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%), url("../assets/artigos.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			color: var(--texto-neutro);
+			padding: 18px;
+			flex-shrink: 0;
+			max-width: 265px;
+			height: 410px;
+			display: flex;
+			flex-direction: column;
+			border-bottom: 7px solid var(--azul);
+			border-radius: 24px;
+			position: relative;
+			&::after {
+				content: url("../assets/play.svg");
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+
+				top: 120px;
+				width: 75px;
+				height: 75px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.auloes__date {
+				position: relative;
+				.date {
+					background-color: var(--rosa);
+					padding: 9px 10px;
+					border-radius: 77px;
+					@include general-text;
+					font-weight: 700;
+					font-size: 16px;
+					line-height: 19px;
+					display: block;
+					position: relative;
+					z-index: 2;
+					max-width: 146px;
+				}
+				.hour {
+					padding: 9px 10px;
+					border-radius: 77px;
+					@include general-text;
+					font-weight: 700;
+					font-size: 16px;
+					line-height: 19px;
+					color: var(--texto-dark);
+					background-color: #26d2e1;
+					position: absolute;
+					padding-left: 70px;
+					top: 0;
+					right: 5px;
+					height: 36px;
+				}
+			}
+
+			p {
+				margin: 0;
+			}
+
+			.auloes__title {
+				margin-top: auto;
+				margin-bottom: 14px;
+				@include general-text;
+				font-size: 24px;
+				line-height: 22px;
+				font-weight: 700;
+				color: var(--cat-azul);
+			}
+			.auloes__prof {
+				max-height: 192px;
+				overflow: auto;
+				@include general-text;
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 15px;
+				b {
+					font-weight: 700;
+				}
+			}
+			&.rosa {
+				.auloes__title {
+					color: var(--cat-s);
+				}
+				border-bottom: 7px solid var(--cat-s);
+			}
+			&.yellow {
+				.auloes__title {
+					color: var(--cat-p);
+				}
+				border-bottom: 7px solid var(--cat-p);
+			}
+			&.green {
+				.auloes__title {
+					color: var(--cat-verde);
+				}
+				border-bottom: 7px solid var(--cat-verde);
+			}
+		}
+	}
+}
+
+.midia {
+	margin-bottom: 170px;
+	.container-midia {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		gap: 20px 20px;
+		grid-auto-flow: row;
+		max-width: 1120px;
+		margin: 0 auto;
+		grid-template-areas:
+			"podcast podcast videos videos"
+			"podcast podcast videos videos"
+			"participe participe participe participe";
+	}
+
+	.card {
+		border: none;
+		padding: 25px 23px;
+		.big-category {
+			margin-bottom: 25px;
+		}
+		.general-text {
+			font-size: 20px;
+			line-height: 24px;
+		}
+		.small-category {
+			color: var(--texto-neutro);
+			font-size: 40px;
+			line-height: 40px;
+			margin-bottom: 24px;
+		}
+		.button--container {
+			max-width: 208px;
+		}
+		.socials {
+			position: absolute;
+			bottom: 0;
+			&__list {
+				display: flex;
+				list-style: none;
+				padding: 0;
+				gap: 10px;
+				a {
+					background-color: var(--texto-neutro);
+					padding: 5px;
+					border-radius: 14px;
+					width: 36px;
+					height: 36px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+		}
+	}
+	.podcast {
+		grid-area: podcast;
+		background-color: var(--verde-agua);
+		border-radius: 24px;
+		position: relative;
+		overflow: hidden;
+		&::before {
+			content: url("../assets/mulher-mic.svg");
+			position: absolute;
+			bottom: -6;
+			right: 60px;
+			z-index: 2;
+		}
+		&::after {
+			content: url("../assets/man-mic.svg");
+			position: absolute;
+			right: 0;
+			bottom: -5;
+		}
+	}
+
+	.videos {
+		grid-area: videos;
+		background-color: #e24541;
+		border-radius: 24px;
+		&::after {
+			content: url("../assets/man-video.png");
+			position: absolute;
+			right: 0;
+			bottom: -6;
+		}
+		&::before {
+			content: url("../assets/videos.svg");
+			position: absolute;
+			right: -60px;
+			bottom: 10px;
+			z-index: 2;
+		}
+	}
+
+	.participe {
+		grid-area: participe;
+		&__container {
+			max-width: 1120px;
+			margin: 0 auto;
+			padding: 28px 23px 27px;
+			background: #24d0e0;
+			border-radius: 24px;
+			display: flex;
+			justify-content: end;
+			position: relative;
+			overflow: hidden;
+			&::before {
+				content: url("../assets/fundo-ask.png");
+				position: absolute;
+				transform: scale(1.1);
+				left: -15px;
+				top: 6px;
+				overflow: hidden;
+			}
+			&::after {
+				content: url("../assets/woman-lupa.svg");
+				position: absolute;
+				left: 0;
+				top: -30px;
+			}
+		}
+		&__content {
+			max-width: 447px;
+			&::before {
+				content: url("../assets/mulher-pc.svg");
+				position: absolute;
+				left: 250px;
+				top: 16px;
+			}
+			.general-text {
+				font-size: 20px;
+				font-weight: 600;
+				color: #00474e;
+			}
+			.small-category {
+				font-size: 40px;
+				line-height: 40px;
+				margin: 20px 0;
+				color: var(--texto-neutro);
+			}
+			.button--container {
+				max-width: 207px;
+			}
+		}
+	}
+}
+
+.especial {
+	&__container {
+		display: flex;
+		gap: 20px;
+		max-width: 1120px;
+		margin: 0 auto;
+		.card {
+			padding: 47px 36px;
+			border-radius: 24px;
+			border: none;
+			background: url("../assets/fundo-ies.svg");
+			color: var(--texto-neutro);
+			height: 802px;
+			.button--container {
+				max-width: 212px;
+			}
+			.big-category {
+				font-size: 70px;
+				color: var(--azul);
+				margin-bottom: 29px;
+				img {
+					margin-left: -13px;
+				}
+			}
+			&.curriculo {
+				background: url("../assets/fundo-curriculo.svg");
+				background-color: #f8d424;
+				color: #4d1600;
+				.button--container {
+					max-width: 202px;
+				}
+				.big-category {
+					color: #4d1600;
+				}
+			}
+		}
+	}
+}
