@@ -108,6 +108,10 @@
 		border-radius: 80px;
 
 		padding: 9px 25px;
+		&:hover {
+			background: #ff598c;
+			color: var(--texto-neutro);
+		}
 	}
 }
 

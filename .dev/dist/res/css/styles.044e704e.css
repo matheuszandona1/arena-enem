@@ -482,6 +482,11 @@ html {
   font-weight: 600;
 }
 
+.button.see-all:hover {
+  color: var(--texto-neutro);
+  background: #ff598c;
+}
+
 .default__container {
   align-items: center;
   max-width: 1048px;
