@@ -8,6 +8,10 @@
 
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js"></script>
+
 		<link rel="stylesheet" href="/res/css/zuck.min.1ba3b491.css">
 		<link rel="stylesheet" href="/res/css/snapgram.a78e52ee.css">
 		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
@@ -53,7 +57,7 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a class="nav-link" href="#aprendizado">Aprendizado</a>
+						<a class="nav-link" style="border: none" href="#aprendizado">Aprendizado</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#news">Notícias</a>
@@ -89,27 +93,36 @@
 	<main>
 		<section class="hero">
 	<div class="hero__container">
-		<img src="/res/img/assets/logo.svg" alt="">
+		<img class="logo" src="/res/img/assets/logo.svg" alt="">
 		<p class="hero__desc">
 			Com o Arena Enem você vai poder estudar quando e onde quiser. <b>Uma plataforma pensada para te ajudar a obter a nota máxima.</b> Notícias, Aulões Online,
 			Simulados, e tudo mais pra você
 		</p>
-		<div class="blue-img">
-			
+		<div class="blue-img" data-aos="fade-right">
+			<img src="/res/img/assets/estrela.svg" alt="">
 		</div>
 	</div>
+	<div class="position-absolute item item-raio-1" data-speed="0.06"><img src="/res/img/assets/raio-1.svg" alt=""></div>
+	<div class="position-absolute item item-raio-2" data-speed="0.06"><img src="/res/img/assets/raio-2.svg" alt=""></div>
+	<div class="position-absolute item item-raio-3" data-speed="0.06"><img src="/res/img/assets/raio-3.svg" alt=""></div>
+	<div class="position-absolute item item-raio-4" data-speed="0.06"><img src="/res/img/assets/raio-4.svg" alt=""></div>
+	<div class="position-absolute item item-raio-5" data-speed="0.06"><img src="/res/img/assets/raio-5.svg" alt=""></div>
+	<div class="position-absolute item item-two-f" data-speed="0.06"><img src="/res/img/assets/two-f.svg" alt=""></div>
+	<div class="position-absolute item item-smile" data-speed="0.06"><img src="/res/img/assets/smile.svg" alt=""></div>
+	<div class="position-absolute item item-pen" data-speed="0.06"><img src="/res/img/assets/pen-a-book.svg" alt=""></div>
+	<div class="position-absolute item item-rock" data-speed="0.06"><img src="/res/img/assets/rock.svg" alt=""></div>
 </section>
 
 		<div class="bg-linhas">
 			<img src="/res/img/assets/fundo-ond.svg" alt="">
 		</div>
 		<section class="storiesHolder">
-	<div id="stories"></div>
+	<div id="stories" data-aos="fade-up"></div>
 </section>
 
 		<section class="content">
 	<div class="container">
-		<div class="card apostilas">
+		<div class="card apostilas" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="700">
 			<h4 class="small-category">apostilas</h4>
 			<p class="general-text">
 				Estamos aqui para tornar sua preparação não apenas eficaz, mas também empolgante. Então, pegue sua apostila e se ajuste na cadeira que
@@ -123,7 +136,7 @@
 				<a href="#" class="button pink">Redação</a>
 			</div>
 		</div>
-		<div class="card teste">
+		<div class="card teste" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="400">
 			<h4 class="small-category">
 				teste <br>
 				vocacional
@@ -136,7 +149,7 @@
 				<a href="#" class="button pink">Quero descobrir</a>
 			</div>
 		</div>
-		<div class="card redacao">
+		<div class="card redacao" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="400">
 			<h4 class="small-category">você está treinando <br>para a redação?</h4>
 			<p class="general-text">
 				<b>Ela é muito importante para o seu sucesso no exame! </b>
@@ -147,7 +160,7 @@
 				<a href="#" class="button">Cadastrar redação</a>
 			</div>
 		</div>
-		<div class="card simulado">
+		<div class="card simulado" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="600">
 			<h4 class="small-category">simulados</h4>
 			<a href="" class="arrow-link">
 				<svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -165,7 +178,7 @@
 				<a href="#" class="button white">Quem simula, aprende! </a>
 			</div>
 		</div>
-		<div class="card guias">
+		<div class="card guias" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="600">
 			<h4 class="small-category">guias de estudo</h4>
 			<p class="general-text">
 				Explore nossos guias de estudo abrangentes para impulsionar seu aprendizado! Nossa coleção de recursos educacionais cuidadosamente elaborados oferece
@@ -179,7 +192,7 @@
 				</svg>
 			</a>
 		</div>
-		<div class="card tutoria">
+		<div class="card tutoria" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="600">
 			<h4 class="small-category">tutoria virtual</h4>
 			<p class="general-text">
 				<b> Desbloqueie seu potencial</b> com nossa plataforma de tutoria virtual! Com uma equipe de tutores especializados e uma variedade de disciplinas.
@@ -196,7 +209,7 @@
 	</div>
 </section>
 
-		<section class="noticias">
+		<section class="noticias" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="500">
 	<div class="default__container">
 		<h3 class="big-category">notícias</h3>
 		<div class="divider"></div>
@@ -235,7 +248,7 @@
 	</div>
 </section>
 
-		<section class="foruns">
+		<section class="foruns" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="400">
 	<div class="default__container">
 		<h3 class="big-category">fóruns</h3>
 		<div class="divider"></div>
@@ -251,13 +264,13 @@
 </section>
 
 		<section class="artigos">
-	<div class="default__container">
+	<div class="default__container" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="400">
 		<h3 class="big-category">artigos</h3>
 		<div class="divider"></div>
 		<div class="button--container"><a href="#" class="button see-all">Acessar</a></div>
 	</div>
 	<div class="container-artigos">
-		<div class="card yellow">
+		<div class="card yellow" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="400">
 			<img src="/res/img/assets/artigos.png" alt="">
 			<a href="#" class="category yellow">Comunidade</a>
 			<p class="date">Fev 27, 2024</p>
@@ -265,7 +278,7 @@
 			<h3 class="artigos__title">Plataforma adaptativa com inteligência artificial generativa apoia estudantes em Língua Portuguesa e Matemática </h3>
 			<p class="time-reading">8 minutos de leitura</p>
 		</div>
-		<div class="card rosa">
+		<div class="card rosa" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="600">
 			<img src="/res/img/assets/artigos.png" alt="">
 			<a href="#" class="category rosa">Categoria</a>
 			<p class="date">Fev 27, 2024</p>
@@ -273,7 +286,7 @@
 			<h3 class="artigos__title">Plataforma adaptativa com inteligência artificial generativa apoia estudantes em Língua Portuguesa e Matemática </h3>
 			<p class="time-reading">8 minutos de leitura</p>
 		</div>
-		<div class="card roxo">
+		<div class="card roxo" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="800">
 			<img src="/res/img/assets/artigos.png" alt="">
 			<a href="#" class="category roxa">Dicas</a>
 			<p class="date">Fev 27, 2024</p>
@@ -285,13 +298,13 @@
 </section>
 
 		<section class="auloes">
-	<div class="default__container">
+	<div class="default__container" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="400">
 		<h3 class="big-category">aulões online</h3>
 		<div class="divider"></div>
 		<p class="text">Escolha sua aula e faça o agendamento</p>
 	</div>
 	<div class="auloes__container">
-		<div class="card">
+		<div class="card" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="400">
 			<div class="auloes__date">
 				<span class="date">24 de dezembro</span>
 				<span class="hour">14h 00</span>
@@ -303,7 +316,7 @@
 				<b>JOSÉ ANTÔNIO (História)</b> - Tema: Escravidão e racismo, da origem aos dias atuais.
 			</p>
 		</div>
-		<div class="card rosa">
+		<div class="card rosa" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="500">
 			<div class="auloes__date">
 				<span class="date">24 de dezembro</span>
 				<span class="hour">14h 00</span>
@@ -315,7 +328,7 @@
 				<b>JOSÉ ANTÔNIO (História)</b> - Tema: Escravidão e racismo, da origem aos dias atuais.
 			</p>
 		</div>
-		<div class="card yellow">
+		<div class="card yellow" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="600">
 			<div class="auloes__date">
 				<span class="date">24 de dezembro</span>
 				<span class="hour">14h 00</span>
@@ -327,7 +340,7 @@
 				<b>JOSÉ ANTÔNIO (História)</b> - Tema: Escravidão e racismo, da origem aos dias atuais.
 			</p>
 		</div>
-		<div class="card green">
+		<div class="card green" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="700">
 			<div class="auloes__date">
 				<span class="date">24 de dezembro</span>
 				<span class="hour">14h 00</span>
@@ -339,7 +352,7 @@
 				<b>JOSÉ ANTÔNIO (História)</b> - Tema: Escravidão e racismo, da origem aos dias atuais.
 			</p>
 		</div>
-		<div class="card">
+		<div class="card" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="400">
 			<div class="auloes__date">
 				<span class="date">24 de dezembro</span>
 				<span class="hour">14h 00</span>
@@ -351,7 +364,7 @@
 				<b>JOSÉ ANTÔNIO (História)</b> - Tema: Escravidão e racismo, da origem aos dias atuais.
 			</p>
 		</div>
-		<div class="card rosa">
+		<div class="card rosa" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="500">
 			<div class="auloes__date">
 				<span class="date">24 de dezembro</span>
 				<span class="hour">14h 00</span>
@@ -363,7 +376,7 @@
 				<b>JOSÉ ANTÔNIO (História)</b> - Tema: Escravidão e racismo, da origem aos dias atuais.
 			</p>
 		</div>
-		<div class="card yellow">
+		<div class="card yellow" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="600">
 			<div class="auloes__date">
 				<span class="date">24 de dezembro</span>
 				<span class="hour">14h 00</span>
@@ -375,7 +388,7 @@
 				<b>JOSÉ ANTÔNIO (História)</b> - Tema: Escravidão e racismo, da origem aos dias atuais.
 			</p>
 		</div>
-		<div class="card green">
+		<div class="card green" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="700">
 			<div class="auloes__date">
 				<span class="date">24 de dezembro</span>
 				<span class="hour">14h 00</span>
@@ -392,7 +405,8 @@
 
 		<section class="midia">
 	<div class="container-midia">
-		<div class="podcast card">
+		<span class="mic" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="400"><img src="/res/img/assets/mic.svg" alt=""></span>
+		<div class="podcast card" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="400">
 			<h4 class="big-category">podcast</h4>
 			<p class="general-text">Ouça nosso podcast sobre Enem!</p>
 			<h5 class="small-category">potencialize seu sucesso com nosso podcast</h5>
@@ -416,7 +430,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="videos card">
+		<div class="videos card" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="600">
 			<h4 class="big-category">vídeos</h4>
 			<p class="general-text">Desbrave o Enem em vídeos envolventes</p>
 			<h5 class="small-category">mergulhe agora em nossa plataforma</h5>
@@ -424,7 +438,7 @@
 				<a href="#" class="button yellow" style="color: #000">Ouvir agora</a>
 			</div>
 		</div>
-		<div class="participe">
+		<div class="participe" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="800">
 			<div class="participe__container">
 				<div class="participe__content">
 					<h5 class="general-text">Encontre respostas, alcance seu potencial</h5>
@@ -438,7 +452,7 @@
 
 		<section class="especial">
 	<div class="especial__container">
-		<div class="card">
+		<div class="card" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="500">
 			<h4 class="big-category">ies <img src="/res/img/assets/iesplay.png" alt=""></h4>
 			<p class="general-text">
 				Acredito que assim como eu, muito alunos que estão se preparando para o ENEM se sentem mais seguros com o surgimento dessa plataforma. Além das aulas
@@ -447,7 +461,7 @@
 			</p>
 			<div class="button--container"><a href="#" class="button">Quero descobrir</a></div>
 		</div>
-		<div class="card curriculo">
+		<div class="card curriculo" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="700">
 			<h4 class="big-category">dr currículo</h4>
 			<p class="general-text">
 				Acredito que assim como eu, muito alunos que estão se preparando para o ENEM se sentem mais seguros com o surgimento dessa plataforma. Além das aulas
@@ -459,11 +473,72 @@
 	</div>
 </section>
 
+		<section class="dep">
+	<div class="default__container">
+		<h3 class="big-category">depoimentos</h3>
+		<div class="divider"></div>
+		<p class="text">Quem participou recomenda!</p>
+	</div>
+	<div class="slide-container">
+		<div class="mySwiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="slide-header">
+						<img src="/res/img/assets/img-d.png" alt="">
+						<p class="slide-name">Duda Costa</p>
+						<p class="slide-member">Membro há 5 meses</p>
+						<p class="slide-text">
+							Acredito que assim como eu, muito alunos que estão se preparando para o ENEM se sentem mais seguros com o surgimento dessa plataforma. Além das
+							aulas dinâmicas e e-books disponibilizados, ainda consegui baixar um planejamento de estudos. Ela possui tudo que os estudantes precisam para
+							realizar a prova.
+						</p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="slide-header">
+						<img src="/res/img/assets/img-d.png" alt="">
+						<p class="slide-name">Duda Costa</p>
+						<p class="slide-member">Membro há 5 meses</p>
+						<p class="slide-text">
+							Acredito que assim como eu, muito alunos que estão se preparando para o ENEM se sentem mais seguros com o surgimento dessa plataforma. Além das
+							aulas dinâmicas e e-books disponibilizados, ainda consegui baixar um planejamento de estudos. Ela possui tudo que os estudantes precisam para
+							realizar a prova.
+						</p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="slide-header">
+						<img src="/res/img/assets/img-d.png" alt="">
+						<p class="slide-name">Duda Costa</p>
+						<p class="slide-member">Membro há 5 meses</p>
+						<p class="slide-text">
+							Acredito que assim como eu, muito alunos que estão se preparando para o ENEM se sentem mais seguros com o surgimento dessa plataforma. Além das
+							aulas dinâmicas e e-books disponibilizados, ainda consegui baixar um planejamento de estudos. Ela possui tudo que os estudantes precisam para
+							realizar a prova.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="swiper-button-prev">anterior</div>
+			<div class="swiper-button-next">próxima</div>
+		</div>
+	</div>
+	<div class="position-absolute item item-raio-1" data-speed="0.06"><img src="/res/img/assets/raio-e-1.svg" alt=""></div>
+	<div class="position-absolute item item-raio-2" data-speed="0.06"><img src="/res/img/assets/raio-e-2.svg" alt=""></div>
+	<div class="position-absolute item item-raio-3" data-speed="0.06"><img src="/res/img/assets/raio-e-3.svg" alt=""></div>
+	<div class="position-absolute item item-raio-4" data-speed="0.06"><img src="/res/img/assets/raio-e-4.svg" alt=""></div>
+</section>
+
 	</main>
 
-	<footer class="footer"></footer>
+	<footer class="footer">
+	<img src="/res/img/assets/lista-ies.png" alt="">
+</footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
 <script src="/res/js/jquery.4a334839.js"></script>
 
 <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -471,6 +546,18 @@
 <script src="/res/js/zuck.min.71e1d26e.js"></script>
 
 <script src="/res/js/index.739bf03c.js" defer=""></script>
+
+<script>var swiper = new Swiper(".mySwiper", {
+    effect: "cards",
+    grabCursor: true,
+    infinite: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    }
+});
+
+</script>
 
 <script>AOS.init();
 

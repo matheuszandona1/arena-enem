@@ -1,6 +1,10 @@
-<footer class="footer"></footer>
+<footer class="footer">
+	<img src="./assets/lista-ies.png" alt="" />
+</footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 <script src="../node_modules/jquery/dist/jquery.js"></script>
 
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -8,6 +12,18 @@
 <script src="./../node_modules/zuck.js/dist/zuck.min.js"></script>
 
 <script src="./js/index.js" type="module"></script>
+
+<script>
+	var swiper = new Swiper(".mySwiper", {
+		effect: "cards",
+		grabCursor: true,
+		infinite: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	})
+</script>
 
 <script>
 	AOS.init()
