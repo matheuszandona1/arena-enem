@@ -243,7 +243,7 @@ document.addEventListener("scroll", function () {
 			path.setAttribute("fill", "#65F2FF")
 		} else if (scrollPosition < 1500) {
 			path.setAttribute("fill", "#FF598C")
-		} else if (scrollPosition < 2100) {
+		} else if (scrollPosition < 2900) {
 			path.setAttribute("fill", "#E9C930")
 		} else if (scrollPosition < 3800) {
 			path.setAttribute("fill", "#36B3FF")
