@@ -795,6 +795,23 @@ $("html").mousemove(function(e) {
         });
     });
 });
+document.addEventListener("scroll", function() {
+    var scrollPosition = window.scrollY;
+    var paths = document.querySelectorAll(".color-change");
+    paths.forEach((path)=>{
+        if (scrollPosition < 200) path.setAttribute("fill", "#65F2FF");
+        else if (scrollPosition < 1500) path.setAttribute("fill", "#FF598C");
+        else if (scrollPosition < 2100) path.setAttribute("fill", "#E9C930");
+        else if (scrollPosition < 3800) path.setAttribute("fill", "#36B3FF");
+        else if (scrollPosition < 4600) path.setAttribute("fill", "#FF598C");
+        else if (scrollPosition < 5500) path.setAttribute("fill", "#E24541");
+        else if (scrollPosition < 8000) path.setAttribute("fill", "#25D1E0");
+    });
+});
+document.addEventListener("scroll", function() {
+    var scrollPosition = window.scrollY;
+    console.log("Posi\xe7\xe3o do Scroll: ", scrollPosition);
+});
 
 },{}]},["l9Mez","ebWYT"], "ebWYT", "parcelRequirec618")
 

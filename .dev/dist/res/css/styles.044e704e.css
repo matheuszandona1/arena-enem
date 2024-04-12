@@ -412,8 +412,8 @@ html {
 
 .bg-linhas {
   max-width: 100%;
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 0%;
   overflow: hidden;
 }
 
@@ -552,6 +552,10 @@ html {
   padding-top: 150px;
   display: flex;
   position: relative;
+}
+
+.color-change {
+  transition: all .3s ease-in-out;
 }
 
 .hero {
