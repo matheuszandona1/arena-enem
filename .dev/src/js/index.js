@@ -158,70 +158,26 @@ const stories = window.Zuck(document.querySelector("#stories"), {
 	],
 })
 
-$(".container-artigos").slick({
-	slidesToShow: 3,
-	autoplay: true,
-	mobileFirst: true, //add this one
+$(".auloes__container").slick({
+	slidesToShow: 1,
+	arrows: false,
+	mobileFirst: true,
+	dots: true,
 	responsive: [
 		{
-			breakpoint: 1024,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 1,
-			},
+			breakpoint: 767,
+			settings: "unslick",
 		},
 		{
 			breakpoint: 480,
 			settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1,
-				infinite: true,
 				dots: true,
+				variableWidth: true,
 			},
 		},
 	],
-})
-
-$(window).on("resize", function () {
-	var width = $(window).width()
-
-	// Verifica se a largura da tela é maior que 1200px
-	if (width > 1200) {
-		// Verifica se o slider já foi inicializado
-		if ($(".auloes__container").hasClass("slick-initialized")) {
-			// Destrói o slider
-			$(".auloes__container").slick("unslick")
-		}
-	} else {
-		// Re-inicializa o slider se a tela for menor que 1200px
-		// e o slider ainda não foi inicializado
-		if (!$(".auloes__container").hasClass("slick-initialized")) {
-			$(".auloes__container").slick({
-				slidesToShow: 8,
-				unslick: true,
-
-				autoplay: true,
-				mobileFirst: true, //add this one
-				responsive: [
-					{
-						breakpoint: 1024,
-						settings: {
-							unslick: true,
-						},
-					},
-					{
-						breakpoint: 480,
-						settings: {
-							slidesToShow: 1,
-							slidesToScroll: 1,
-							infinite: true,
-							dots: true,
-						},
-					},
-				],
-			})
-		}
-	}
 })
 
 // Inicializa o slider quando a página é carregada

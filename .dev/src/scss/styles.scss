@@ -9,3 +9,47 @@
 
 @import "./site/componentes";
 @import "./site/page";
+
+.desktop-only {
+	@include media(s) {
+		display: none;
+	}
+}
+.mobile-only {
+	display: none;
+	@include media(s) {
+		display: block;
+	}
+}
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+
+	margin: 0;
+	padding: 1rem 0;
+
+	list-style-type: none;
+
+	li {
+		margin: 0 0.25rem;
+	}
+
+	button {
+		display: block;
+		width: 11px;
+		height: 11px;
+		padding: 0;
+
+		border: none;
+		border-radius: 4px;
+		background-color: rgba(255, 89, 140, 0.4);
+
+		text-indent: -9999px;
+	}
+
+	li.slick-active button {
+		background-color: #ff598c;
+		width: 54px;
+	}
+}

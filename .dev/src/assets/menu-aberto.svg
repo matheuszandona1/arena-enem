@@ -1,1 +1,5 @@
-<svg id="Layer_2" height="512" viewBox="0 0 28 28" width="512" xmlns="http://www.w3.org/2000/svg" data-name="Layer 2"><path fill="#4e2251" d="m3 8h22a2 2 0 0 0 0-4h-22a2 2 0 0 0 0 4z"/><path fill="#4e2251" d="m25 12h-22a2 2 0 0 0 0 4h22a2 2 0 0 0 0-4z"/><path fill="#4e2251" d="m25 20h-22a2 2 0 0 0 0 4h22a2 2 0 0 0 0-4z"/></svg>
+<svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3C0.723858 3 0.5 3.22386 0.5 3.5C0.5 3.77614 0.723858 4 1 4L1 3ZM1 4L11 4L11 3L1 3L1 4Z" fill="white"/>
+<path d="M1 6C0.723858 6 0.5 6.22386 0.5 6.5C0.5 6.77614 0.723858 7 1 7L1 6ZM1 7L11 7L11 6L1 6L1 7Z" fill="white"/>
+<path d="M1 0C0.723858 -2.1727e-08 0.5 0.223858 0.5 0.5C0.5 0.776142 0.723858 1 1 1L1 0ZM1 1L11 1L11 7.86805e-07L1 0L1 1Z" fill="white"/>
+</svg>
