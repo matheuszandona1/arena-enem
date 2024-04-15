@@ -359,9 +359,9 @@ html {
 }
 
 .header {
-  z-index: 3;
+  z-index: 9999;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 13px;
 }
 
@@ -410,6 +410,10 @@ html {
   padding: 0 19px !important;
 }
 
+.header__container .nav-link.bold {
+  font-weight: bold;
+}
+
 .bg-linhas {
   max-width: 100%;
   position: fixed;
@@ -421,6 +425,8 @@ html {
   text-align: center;
   color: var(--texto-neutro);
   background: var(--azul);
+  box-sizing: border-box;
+  border: 1px solid var(--azul);
   border-radius: 24px;
   width: 100%;
   padding: 6px 30px;
@@ -446,6 +452,7 @@ html {
 
 .button.yellow {
   background: var(--amarelo-dark);
+  border: 1px solid var(--amarelo-dark);
 }
 
 .button.yellow:hover {
@@ -456,6 +463,7 @@ html {
 
 .button.green-aqua {
   background: var(--verde-agua);
+  border: 1px solid var(--verde-agua);
 }
 
 .button.green-aqua:hover {
@@ -466,6 +474,7 @@ html {
 
 .button.roxo {
   background: var(--roxo);
+  border: 1px solid var(--roxo);
 }
 
 .button.roxo:hover {
@@ -476,6 +485,7 @@ html {
 
 .button.pink {
   background: var(--rosa);
+  border: 1px solid var(--rosa);
 }
 
 .button.pink:hover {
@@ -486,7 +496,14 @@ html {
 
 .button.white {
   background: var(--texto-neutro);
+  border: 1px solid var(--texto-neutro);
   color: #4e4310;
+}
+
+.button.white:hover {
+  color: var(--texto-neutro);
+  background: #4e4310;
+  border: none;
 }
 
 .button.see-all {
@@ -729,6 +746,7 @@ html {
 }
 
 .content .container .card {
+  cursor: pointer;
   border-radius: 24px;
   padding: 25px;
 }
@@ -947,7 +965,6 @@ html {
 .content .tutoria {
   background: #a4be4b;
   grid-area: tutoria;
-  overflow: hidden;
   padding: 25px 40px !important;
 }
 
@@ -1221,9 +1238,8 @@ html {
 .artigos .container-artigos {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 17px;
+  padding: 20px 17px;
   display: flex;
-  overflow: auto;
 }
 
 .artigos .container-artigos .card {
@@ -2028,7 +2044,7 @@ html {
 
   .hero {
     clip-path: ellipse(100% 75% at 48% 25%);
-    background: #ffec00 url("../img/assets/fundo-hero-mobile.png");
+    background: #ffec00 url("../img/assets/fundo-hero-mobile.png") 0 0 / cover;
     height: 756px !important;
   }
 
@@ -2149,7 +2165,7 @@ html {
 
   .content .teste {
     height: 600px;
-    top: 10px;
+    top: 20px;
     overflow: hidden;
   }
 
@@ -2166,7 +2182,7 @@ html {
   }
 
   .content .redacao {
-    top: 40px;
+    top: 50px;
   }
 
   .content .redacao:before {
@@ -2176,15 +2192,16 @@ html {
   }
 
   .content .simulado {
-    top: 60px;
+    top: 70px;
   }
 
   .content .guias {
-    top: 80px;
+    top: 90px;
   }
 
   .content .tutoria {
-    top: 100px;
+    top: 110px;
+    overflow: hidden;
   }
 
   .content .tutoria:before {
@@ -2297,6 +2314,10 @@ html {
     background-image: url("../img/assets/artigos.svg");
   }
 
+  .artigos .container-artigos {
+    overflow: auto;
+  }
+
   .artigos .container-artigos .card {
     width: 320px;
   }
@@ -2353,6 +2374,10 @@ html {
     margin: 0 10px;
   }
 
+  .midia {
+    margin-bottom: 79px;
+  }
+
   .midia .container-midia .mic {
     right: 0;
     left: unset;
@@ -2401,8 +2426,16 @@ html {
     height: auto;
   }
 
-  .midia .podcast, .midia .videos {
+  .midia .podcast {
     height: 500px;
+    position: sticky;
+    top: 0;
+  }
+
+  .midia .videos {
+    height: 500px;
+    position: sticky;
+    top: 30px;
   }
 
   .midia .videos:after {
@@ -2416,6 +2449,11 @@ html {
     top: -70px;
     right: -50px;
     transform: scale(.4);
+  }
+
+  .midia .participe {
+    position: sticky;
+    top: 60px;
   }
 
   .midia .participe__container {
@@ -2490,6 +2528,7 @@ html {
 
   .dep .slide-container {
     background: url("../img/assets/fundo-dep-m.png") 0 0 / cover;
+    margin-top: -170px;
     overflow: hidden;
   }
 
@@ -2532,12 +2571,12 @@ html {
   }
 
   .dep .slide-container .mySwiper .swiper-slide, .dep .slide-container .mySwiper .swiper-slide .slide-header {
-    height: 346px;
+    height: 396px;
   }
 
   .dep .slide-container .mySwiper .swiper-slide .slide-header .slide-text {
     border-radius: 16px;
-    max-height: 123px;
+    max-height: 163px;
     overflow: auto;
   }
 
@@ -2547,6 +2586,12 @@ html {
 
   .mobile-only {
     display: block;
+  }
+}
+
+@media (width <= 1400px) {
+  .header__container .nav-link {
+    padding: 0 10px !important;
   }
 }
 

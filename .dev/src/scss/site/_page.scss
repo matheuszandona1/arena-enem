@@ -15,6 +15,7 @@
 	}
 	@include media(s) {
 		background: url("../assets/fundo-hero-mobile.png");
+		background-size: cover;
 		background-color: #ffec00;
 		clip-path: ellipse(100% 75% at 48% 25%);
 		height: 756px !important;
@@ -256,6 +257,7 @@
 		.card {
 			padding: 25px;
 			border-radius: 24px;
+			cursor: pointer;
 			@include media(s) {
 				max-width: 327px;
 				position: sticky;
@@ -314,7 +316,7 @@
 		@include media(s) {
 			overflow: hidden;
 			height: 600px;
-			top: 10px;
+			top: 20px;
 		}
 		&:hover {
 			&::before {
@@ -367,7 +369,7 @@
 		position: relative;
 		margin-top: 26px;
 		@include media(s) {
-			top: 40px;
+			top: 50px;
 		}
 		&:hover {
 			&::before {
@@ -422,7 +424,7 @@
 			top: 80px;
 		}
 		@include media(s) {
-			top: 60px;
+			top: 70px;
 		}
 
 		.small-category {
@@ -458,7 +460,7 @@
 		background: rgba(255, 89, 140, 0.4);
 		overflow: hidden;
 		@include media(s) {
-			top: 80px;
+			top: 90px;
 		}
 		&:hover {
 			&::before {
@@ -503,9 +505,9 @@
 		grid-area: tutoria;
 		background: #a4be4b;
 		padding: 25px 40px !important;
-		overflow: hidden;
 		@include media(s) {
-			top: 100px;
+			overflow: hidden;
+			top: 110px;
 		}
 		&:hover {
 			&::before {
@@ -856,9 +858,11 @@
 		max-width: 1120px;
 		margin: 0 auto;
 		display: flex;
-		overflow: auto;
-		padding: 0 17px;
+		padding: 20px 17px;
 
+		@include media(s) {
+			overflow: auto;
+		}
 		.card {
 			border-radius: 24px;
 			padding-bottom: 40px;
@@ -1125,7 +1129,9 @@
 
 .midia {
 	margin-bottom: 170px;
-
+	@include media(s) {
+		margin-bottom: 79px;
+	}
 	.container-midia {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1246,6 +1252,8 @@
 		overflow: hidden;
 		@include media(s) {
 			height: 500px;
+			position: sticky;
+			top: 0;
 		}
 
 		&::before {
@@ -1269,6 +1277,8 @@
 		border-radius: 24px;
 		@include media(s) {
 			height: 500px;
+			position: sticky;
+			top: 30;
 		}
 		&::after {
 			content: url("../assets/man-video.png");
@@ -1298,7 +1308,10 @@
 
 	.participe {
 		grid-area: participe;
-
+		@include media(s) {
+			position: sticky;
+			top: 60;
+		}
 		&__container {
 			max-width: 1120px;
 			margin: 0 auto;
@@ -1474,6 +1487,7 @@
 			background: url("../assets/fundo-dep-m.png");
 			background-size: cover;
 			overflow: hidden;
+			margin-top: -170px;
 		}
 
 		.mySwiper {
@@ -1575,7 +1589,7 @@
 				height: 446px;
 				border-radius: 24px;
 				@include media(s) {
-					height: 346px;
+					height: 396px;
 				}
 				@include xl-shadow;
 				&::before {
@@ -1619,7 +1633,7 @@
 					height: 446px;
 
 					@include media(s) {
-						height: 346px;
+						height: 396px;
 					}
 					img {
 						text-align: center;
@@ -1657,7 +1671,7 @@
 						line-height: 19px;
 						font-size: 14px;
 						@include media(s) {
-							max-height: 123px;
+							max-height: 163px;
 							border-radius: 16px;
 							overflow: auto;
 						}

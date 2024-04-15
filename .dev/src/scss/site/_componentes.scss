@@ -1,8 +1,8 @@
 .header {
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	top: 13px;
-	z-index: 3;
+	z-index: 9999;
 	&__container {
 		max-width: 1500px;
 		margin: 0 auto;
@@ -49,6 +49,12 @@
 				padding: 0 19px !important;
 				color: var(--texto-neutro);
 				border-left: 1px solid var(--texto-neutro);
+				&.bold {
+					font-weight: bold;
+				}
+				@media (max-width: 1400px) {
+					padding: 0 10px !important;
+				}
 				@include media(s) {
 					border: none;
 					margin-bottom: 20px;
@@ -76,6 +82,8 @@
 	color: var(--texto-neutro);
 	background: var(--azul);
 	transition: all 0.2s ease;
+	box-sizing: border-box;
+	border: 1px solid var(--azul);
 	&:hover {
 		color: var(--azul);
 		background: var(--texto-neutro);
@@ -88,6 +96,8 @@
 	}
 	&.yellow {
 		background: var(--amarelo-dark);
+		border: 1px solid var(--amarelo-dark);
+
 		&:hover {
 			background: var(--texto-neutro);
 			border: 1px solid var(--amarelo-dark);
@@ -97,6 +107,8 @@
 	}
 	&.green-aqua {
 		background: var(--verde-agua);
+		border: 1px solid var(--verde-agua);
+
 		&:hover {
 			background: var(--texto-neutro);
 			border: 1px solid var(--verde-agua);
@@ -106,6 +118,8 @@
 	}
 	&.roxo {
 		background: var(--roxo);
+		border: 1px solid var(--roxo);
+
 		&:hover {
 			background: var(--texto-neutro);
 			border: 1px solid var(--roxo);
@@ -115,6 +129,7 @@
 	}
 	&.pink {
 		background: var(--rosa);
+		border: 1px solid var(--rosa);
 
 		&:hover {
 			background: var(--texto-neutro);
@@ -125,7 +140,14 @@
 	}
 	&.white {
 		background: var(--texto-neutro);
+		border: 1px solid var(--texto-neutro);
+
 		color: #4e4310;
+		&:hover {
+			background: #4e4310;
+			color: var(--texto-neutro);
+			border: none;
+		}
 	}
 	&.see-all {
 		border: 1px solid #ff598c;

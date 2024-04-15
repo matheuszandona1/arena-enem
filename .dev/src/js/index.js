@@ -261,3 +261,17 @@ document.addEventListener("scroll", function () {
 	var scrollPosition = window.scrollY
 	console.log("Posição do Scroll: ", scrollPosition)
 })
+
+// Selecionar todos os elementos com a classe 'nav-link'
+const navLinks = document.querySelectorAll(".nav-link")
+
+// Adicionar evento de clique a cada link
+navLinks.forEach((link) => {
+	link.addEventListener("click", function () {
+		// Remover a classe 'bold' de todos os links
+		navLinks.forEach((lnk) => lnk.classList.remove("bold"))
+
+		// Adicionar a classe 'bold' ao link clicado
+		this.classList.add("bold")
+	})
+})
