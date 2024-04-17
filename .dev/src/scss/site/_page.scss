@@ -309,9 +309,6 @@
 			padding: 0 20px;
 			justify-content: center;
 			align-items: center;
-			position: sticky;
-			top: 150px;
-			height: 100%;
 		}
 		@include media(m) {
 			display: flex;
@@ -319,9 +316,6 @@
 			padding: 0 20px;
 			justify-content: center;
 			align-items: center;
-			position: sticky;
-			top: 150px;
-			height: 100%;
 		}
 	}
 
@@ -332,7 +326,7 @@
 		position: relative;
 		overflow: hidden;
 		@include media(s) {
-			top: 150px;
+			top: 120px;
 		}
 		@include media(m) {
 			top: 150px;
@@ -363,7 +357,7 @@
 		@include media(s) {
 			overflow: hidden;
 			height: 600px;
-			top: 170px;
+			top: 140px;
 		}
 		@include media(m) {
 			overflow: hidden;
@@ -421,7 +415,7 @@
 		position: relative;
 		margin-top: 26px;
 		@include media(s) {
-			top: 200px;
+			top: 160px;
 		}
 		@include media(m) {
 			top: 200px;
@@ -479,7 +473,7 @@
 			top: 70px;
 		}
 		@include media(s) {
-			top: 230px;
+			top: 180px;
 		}
 		@include media(m) {
 			top: 230px;
@@ -518,7 +512,7 @@
 		background: rgba(255, 89, 140, 0.4);
 		overflow: hidden;
 		@include media(s) {
-			top: 250px;
+			top: 200px;
 		}
 		@include media(m) {
 			top: 250px;
@@ -568,7 +562,7 @@
 		padding: 25px 40px !important;
 		@include media(s) {
 			overflow: hidden;
-			top: 270px;
+			top: 220px;
 		}
 		@include media(m) {
 			overflow: hidden;

@@ -579,8 +579,10 @@ html {
 }
 
 .footer img {
+  z-index: 4;
   max-width: 100%;
   height: auto;
+  position: relative;
 }
 
 .color-change {
@@ -2049,12 +2051,24 @@ html {
     font-size: 14px;
   }
 
+  .footer img {
+    margin-bottom: 100px;
+  }
+
   .footer {
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     height: 100%;
-    margin-top: -225px;
+    margin-top: -230px;
     padding-top: 140px;
+  }
+
+  .footer:before {
+    content: "";
+    background-color: #f8d424;
+    width: 100%;
+    height: 200px;
+    position: absolute;
   }
 
   .hero {
@@ -2168,20 +2182,17 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
     padding: 0 20px;
     display: flex;
-    position: sticky;
-    top: 150px;
   }
 
   .content .apostilas {
-    top: 150px;
+    top: 120px;
   }
 
   .content .teste {
     height: 600px;
-    top: 170px;
+    top: 140px;
     overflow: hidden;
   }
 
@@ -2198,7 +2209,7 @@ html {
   }
 
   .content .redacao {
-    top: 200px;
+    top: 160px;
   }
 
   .content .redacao:before {
@@ -2208,15 +2219,15 @@ html {
   }
 
   .content .simulado {
-    top: 230px;
+    top: 180px;
   }
 
   .content .guias {
-    top: 250px;
+    top: 200px;
   }
 
   .content .tutoria {
-    top: 270px;
+    top: 220px;
     overflow: hidden;
   }
 
@@ -2659,6 +2670,13 @@ html {
   }
 }
 
+@media (width <= 1281px) {
+  .default__container:before {
+    left: -120px;
+    transform: scale(.5);
+  }
+}
+
 @media (width <= 1600px) {
   .hero {
     height: 670px;
@@ -2727,11 +2745,8 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
     padding: 0 20px;
     display: flex;
-    position: sticky;
-    top: 150px;
   }
 
   .content .apostilas {
