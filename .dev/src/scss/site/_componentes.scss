@@ -15,6 +15,14 @@
 		}
 		.navbar {
 			padding: 0;
+			&-expand-lg {
+				.navbar-toggler {
+					position: absolute;
+					right: 0;
+					height: auto;
+					top: 20px;
+				}
+			}
 			&-collapse {
 				justify-content: end;
 				@include media(s) {
@@ -146,7 +154,7 @@
 		&:hover {
 			background: #4e4310;
 			color: var(--texto-neutro);
-			border: none;
+			border-color: #4e4310;
 		}
 	}
 	&.see-all {
@@ -231,7 +239,10 @@
 
 .footer {
 	background-image: url("../assets/footer.png");
-
+	img {
+		max-width: 100%;
+		height: auto;
+	}
 	@include media(s) {
 		height: 100%;
 		background-size: cover;
@@ -239,10 +250,6 @@
 		margin-top: -225px;
 		// padding-bottom: 100px;
 		padding-top: 140px;
-		img {
-			max-width: 100%;
-			height: auto;
-		}
 	}
 	height: 702px;
 	display: flex;

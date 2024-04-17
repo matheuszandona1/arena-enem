@@ -27,12 +27,19 @@
 		@include media(s) {
 			padding: 0px 20px;
 		}
+		@include media(m) {
+			padding: 0 10%;
+		}
 		.logo {
 			max-width: 500px;
 			position: relative;
 			z-index: 2;
 			@include media(s) {
 				max-width: 100%;
+				height: auto;
+			}
+			@include media(m) {
+				max-width: 300px;
 				height: auto;
 			}
 		}
@@ -47,11 +54,18 @@
 				max-width: 100%;
 				height: auto;
 			}
+			@include media(m) {
+				top: 100px;
+			}
 			&::after {
 				content: url("../assets/personagens.svg");
 				position: absolute;
 				right: 150px;
 				bottom: 82px;
+				@include media(m) {
+					right: 0;
+					bottom: 20px;
+				}
 			}
 			@media (max-width: 1600px) {
 				max-width: 100%;
@@ -83,6 +97,9 @@
 			text-align: center;
 			font-size: 16px;
 		}
+		@include media(m) {
+			margin-left: 0;
+		}
 	}
 
 	.item {
@@ -97,6 +114,9 @@
 				@include media(s) {
 					display: none;
 				}
+				@include media(m) {
+					display: none;
+				}
 			}
 			&-2 {
 				left: 100px;
@@ -105,6 +125,9 @@
 					left: 20px;
 					top: unset;
 					bottom: 100px;
+				}
+				@include media(m) {
+					top: 400px;
 				}
 			}
 			&-3 {
@@ -168,11 +191,17 @@
 		}
 		&-rock {
 			right: 600px;
+			@include media(m) {
+				display: none;
+			}
 		}
 		&-two-f {
 			right: 200px;
 			top: 100px;
 			@include media(s) {
+				display: none;
+			}
+			@include media(m) {
 				display: none;
 			}
 		}
@@ -262,6 +291,10 @@
 				max-width: 327px;
 				position: sticky;
 			}
+			@include media(m) {
+				max-width: 327px;
+				position: sticky;
+			}
 			.small-category {
 				margin-bottom: 22px;
 			}
@@ -276,7 +309,18 @@
 			padding: 0 20px;
 			justify-content: center;
 			align-items: center;
-			position: relative;
+			position: sticky;
+			top: 150px;
+			height: 100%;
+		}
+		@include media(m) {
+			display: flex;
+			flex-direction: column;
+			padding: 0 20px;
+			justify-content: center;
+			align-items: center;
+			position: sticky;
+			top: 150px;
 			height: 100%;
 		}
 	}
@@ -288,7 +332,10 @@
 		position: relative;
 		overflow: hidden;
 		@include media(s) {
-			top: 0;
+			top: 150px;
+		}
+		@include media(m) {
+			top: 150px;
 		}
 
 		&::after {
@@ -316,7 +363,12 @@
 		@include media(s) {
 			overflow: hidden;
 			height: 600px;
-			top: 20px;
+			top: 170px;
+		}
+		@include media(m) {
+			overflow: hidden;
+			height: 600px;
+			top: 170px;
 		}
 		&:hover {
 			&::before {
@@ -369,7 +421,10 @@
 		position: relative;
 		margin-top: 26px;
 		@include media(s) {
-			top: 50px;
+			top: 200px;
+		}
+		@include media(m) {
+			top: 200px;
 		}
 		&:hover {
 			&::before {
@@ -421,10 +476,13 @@
 			content: url("../assets/ondas.svg");
 			position: absolute;
 			left: 0;
-			top: 80px;
+			top: 70px;
 		}
 		@include media(s) {
-			top: 70px;
+			top: 230px;
+		}
+		@include media(m) {
+			top: 230px;
 		}
 
 		.small-category {
@@ -460,7 +518,10 @@
 		background: rgba(255, 89, 140, 0.4);
 		overflow: hidden;
 		@include media(s) {
-			top: 90px;
+			top: 250px;
+		}
+		@include media(m) {
+			top: 250px;
 		}
 		&:hover {
 			&::before {
@@ -507,7 +568,11 @@
 		padding: 25px 40px !important;
 		@include media(s) {
 			overflow: hidden;
-			top: 110px;
+			top: 270px;
+		}
+		@include media(m) {
+			overflow: hidden;
+			top: 270px;
 		}
 		&:hover {
 			&::before {
@@ -587,6 +652,11 @@
 			overflow: auto;
 			padding: 0 20px;
 		}
+		@include media(m) {
+			display: flex;
+			overflow: auto;
+			padding: 0 20px;
+		}
 	}
 
 	&__card-title {
@@ -618,8 +688,24 @@
 			@include media(s) {
 				content: url(../assets/onda-grande-m-r.svg);
 			}
+			@include media(m) {
+				content: url(../assets/onda-grande-m-r.svg);
+			}
 		}
 		@include media(s) {
+			height: 435px;
+			max-width: 320px;
+			width: 100%;
+			overflow: hidden;
+			flex-shrink: 0;
+			img {
+				max-width: 100%;
+				height: 435px;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+		@include media(m) {
 			height: 435px;
 			max-width: 320px;
 			width: 100%;
@@ -651,8 +737,8 @@
 		}
 		&.roxo {
 			.noticias__card-title {
-				max-height: 108px;
-				overflow: auto;
+				font-size: 26px;
+				line-height: 28px;
 			}
 		}
 		&.secundaria {
@@ -694,6 +780,9 @@
 			@include media(s) {
 				content: url(../assets/onda-grande-m-ro.svg);
 			}
+			@include media(m) {
+				content: url(../assets/onda-grande-m-ro.svg);
+			}
 		}
 	}
 
@@ -712,6 +801,9 @@
 			position: absolute;
 			bottom: -6px;
 			@include media(s) {
+				content: url(../assets/onda-grande.svg);
+			}
+			@include media(m) {
 				content: url(../assets/onda-grande.svg);
 			}
 		}
@@ -758,12 +850,17 @@
 		@include media(s) {
 			overflow: hidden;
 		}
+		@include media(m) {
+			overflow: hidden;
+		}
 		&::before {
 			content: url("../assets/foruns-bg.svg");
 			position: absolute;
 			left: 0;
 			top: 0;
-
+			@include media(m) {
+				left: -300px;
+			}
 			@include media(s) {
 				content: "";
 				width: 500px;
@@ -802,6 +899,9 @@
 			position: absolute;
 			left: 250px;
 			top: 0px;
+			@include media(m) {
+				display: none;
+			}
 			@include media(s) {
 				top: unset;
 				bottom: -74px;
@@ -852,6 +952,9 @@
 		.divider {
 			max-width: 100%;
 		}
+		@include media(m) {
+			padding: 0 20px;
+		}
 	}
 	margin-bottom: 110px;
 	.container-artigos {
@@ -859,6 +962,11 @@
 		margin: 0 auto;
 		display: flex;
 		padding: 20px 17px;
+
+		@include media(m) {
+			padding: 0 20px;
+			overflow: auto;
+		}
 
 		@include media(s) {
 			overflow: auto;
@@ -985,6 +1093,9 @@
 			flex-direction: column;
 			gap: 12px;
 		}
+		@include media(m) {
+			padding: 0 20px;
+		}
 		&::before {
 			content: url("../assets/aulos.svg");
 
@@ -1014,6 +1125,16 @@
 				}
 			}
 		}
+		@include media(m) {
+			max-width: 100%;
+			padding: 0 20px;
+			.slick-list {
+				margin: 0 -10px;
+				.slick-slide {
+					width: 265px;
+				}
+			}
+		}
 
 		.card {
 			background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%), url("../assets/artigos.png");
@@ -1032,6 +1153,10 @@
 			position: relative;
 			cursor: pointer;
 			@include media(s) {
+				margin: 0 10px;
+				max-width: unset;
+			}
+			@include media(m) {
 				margin: 0 10px;
 				max-width: unset;
 			}
@@ -1160,8 +1285,17 @@
 					max-width: 100%;
 				}
 			}
+			@include media(m) {
+				display: none;
+			}
 		}
 		@include media(s) {
+			display: flex;
+			flex-direction: column;
+			padding: 0 20px;
+			gap: 38px;
+		}
+		@include media(m) {
 			display: flex;
 			flex-direction: column;
 			padding: 0 20px;
@@ -1172,6 +1306,10 @@
 	.card {
 		border: none;
 		padding: 25px 23px;
+		@include media(m) {
+			position: relative;
+			z-index: 5;
+		}
 		.big-category {
 			margin-bottom: 25px;
 			position: relative;
@@ -1195,6 +1333,11 @@
 				font-size: 20px;
 				line-height: 20px;
 			}
+			@include media(m) {
+				font-size: 20px;
+				line-height: 20px;
+				max-width: 380px;
+			}
 		}
 		.button--container {
 			max-width: 208px;
@@ -1212,12 +1355,20 @@
 				top: 35px;
 				right: 10px;
 			}
+			@include media(m) {
+				bottom: unset;
+				top: 35px;
+				right: 10px;
+			}
 			&__list {
 				display: flex;
 				list-style: none;
 				padding: 0;
 				gap: 10px;
 				@include media(s) {
+					gap: 5px;
+				}
+				@include media(m) {
 					gap: 5px;
 				}
 				a {
@@ -1230,6 +1381,14 @@
 					align-items: center;
 					justify-content: center;
 					@include media(s) {
+						width: 24px;
+						height: 24px;
+						img {
+							max-width: 100%;
+							height: auto;
+						}
+					}
+					@include media(m) {
 						width: 24px;
 						height: 24px;
 						img {
@@ -1250,6 +1409,9 @@
 		border-radius: 24px;
 		position: relative;
 		overflow: hidden;
+		@include media(m) {
+			background-position: left;
+		}
 		@include media(s) {
 			height: 500px;
 			position: sticky;
@@ -1279,6 +1441,10 @@
 			height: 500px;
 			position: sticky;
 			top: 30;
+		}
+		@include media(m) {
+			position: relative;
+			overflow: hidden;
 		}
 		&::after {
 			content: url("../assets/man-video.png");
@@ -1332,6 +1498,9 @@
 				left: -15px;
 				top: 6px;
 				overflow: hidden;
+				@include media(m) {
+					left: -340px;
+				}
 				@include media(s) {
 					content: url("../assets/fundo-ask-m.png");
 					top: unset;
@@ -1360,6 +1529,9 @@
 				position: absolute;
 				left: 250px;
 				top: 16px;
+				@include media(m) {
+					display: none;
+				}
 				@include media(s) {
 					transform: scale(0.7);
 					top: unset;
@@ -1400,6 +1572,12 @@
 		@include media(s) {
 			flex-direction: column;
 			padding: 0 20px;
+			position: relative;
+		}
+		@include media(m) {
+			flex-direction: column;
+			padding: 0 20px;
+			position: relative;
 		}
 		.card {
 			padding: 47px 36px;
@@ -1413,6 +1591,18 @@
 				height: 583px;
 				background-size: cover;
 				padding: 47px 23px;
+				position: sticky;
+				top: 200px;
+			}
+			@include media(m) {
+				background: url("../assets/fundo-ies.svg");
+				height: 583px;
+				background-size: cover;
+				background-position: center;
+				padding: 47px 23px;
+				position: sticky;
+				top: 200px;
+				background-repeat: no-repeat;
 			}
 			.button--container {
 				max-width: 212px;
@@ -1444,6 +1634,12 @@
 					background: url("../assets/fundo-curriculo-m.svg");
 					background-color: #f8d424;
 					height: 514px;
+					position: sticky;
+					top: 170px;
+				}
+				@include media(m) {
+					background-position: center;
+					background-size: cover;
 				}
 
 				.button--container {
@@ -1468,6 +1664,9 @@
 			justify-content: center;
 			flex-direction: column;
 			gap: 10px;
+		}
+		@include media(m) {
+			padding: 0 20px;
 		}
 		&::before {
 			display: none;

@@ -378,6 +378,13 @@ html {
   padding: 0;
 }
 
+.header__container .navbar-expand-lg .navbar-toggler {
+  height: auto;
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
 .header__container .navbar-collapse {
   justify-content: end;
 }
@@ -503,7 +510,7 @@ html {
 .button.white:hover {
   color: var(--texto-neutro);
   background: #4e4310;
-  border: none;
+  border-color: #4e4310;
 }
 
 .button.see-all {
@@ -569,6 +576,11 @@ html {
   padding-top: 150px;
   display: flex;
   position: relative;
+}
+
+.footer img {
+  max-width: 100%;
+  height: auto;
 }
 
 .color-change {
@@ -880,7 +892,7 @@ html {
 .content .simulado:after {
   content: url("../img/assets/ondas.svg");
   position: absolute;
-  top: 80px;
+  top: 70px;
   left: 0;
 }
 
@@ -1076,8 +1088,8 @@ html {
 }
 
 .noticias .card.roxo .noticias__card-title {
-  max-height: 108px;
-  overflow: auto;
+  font-size: 26px;
+  line-height: 28px;
 }
 
 .noticias .card.secundaria .noticias__card-title {
@@ -2037,11 +2049,6 @@ html {
     padding-top: 140px;
   }
 
-  .footer img {
-    max-width: 100%;
-    height: auto;
-  }
-
   .hero {
     clip-path: ellipse(100% 75% at 48% 25%);
     background: #ffec00 url("../img/assets/fundo-hero-mobile.png") 0 0 / cover;
@@ -2156,16 +2163,17 @@ html {
     height: 100%;
     padding: 0 20px;
     display: flex;
-    position: relative;
+    position: sticky;
+    top: 150px;
   }
 
   .content .apostilas {
-    top: 0;
+    top: 150px;
   }
 
   .content .teste {
     height: 600px;
-    top: 20px;
+    top: 170px;
     overflow: hidden;
   }
 
@@ -2182,7 +2190,7 @@ html {
   }
 
   .content .redacao {
-    top: 50px;
+    top: 200px;
   }
 
   .content .redacao:before {
@@ -2192,15 +2200,15 @@ html {
   }
 
   .content .simulado {
-    top: 70px;
+    top: 230px;
   }
 
   .content .guias {
-    top: 90px;
+    top: 250px;
   }
 
   .content .tutoria {
-    top: 110px;
+    top: 270px;
     overflow: hidden;
   }
 
@@ -2490,12 +2498,15 @@ html {
   .especial__container {
     flex-direction: column;
     padding: 0 20px;
+    position: relative;
   }
 
   .especial__container .card {
     background: url("../img/assets/fundo-ies-m.svg") 0 0 / cover;
     height: 583px;
     padding: 47px 23px;
+    position: sticky;
+    top: 200px;
   }
 
   .especial__container .card .button--container {
@@ -2514,6 +2525,8 @@ html {
   .especial__container .card.curriculo {
     background: #f8d424 url("../img/assets/fundo-curriculo-m.svg");
     height: 514px;
+    position: sticky;
+    top: 170px;
   }
 
   .especial__container .card.curriculo .button--container {
@@ -2616,6 +2629,243 @@ html {
 
   .hero__container .blue-img img {
     max-width: 100%;
+  }
+}
+
+@media only screen and (width >= 768px) and (width <= 959px) {
+  .hero__container {
+    padding: 0 10%;
+  }
+
+  .hero__container .logo {
+    max-width: 300px;
+    height: auto;
+  }
+
+  .hero__container .blue-img {
+    top: 100px;
+  }
+
+  .hero__container .blue-img:after {
+    bottom: 20px;
+    right: 0;
+  }
+
+  .hero__desc {
+    margin-left: 0;
+  }
+
+  .hero .item-raio-1 {
+    display: none;
+  }
+
+  .hero .item-raio-2 {
+    top: 400px;
+  }
+
+  .hero .item-rock, .hero .item-two-f {
+    display: none;
+  }
+
+  .content .container .card {
+    max-width: 327px;
+    position: sticky;
+  }
+
+  .content .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    position: sticky;
+    top: 150px;
+  }
+
+  .content .apostilas {
+    top: 150px;
+  }
+
+  .content .teste {
+    height: 600px;
+    top: 170px;
+    overflow: hidden;
+  }
+
+  .content .redacao {
+    top: 200px;
+  }
+
+  .content .simulado {
+    top: 230px;
+  }
+
+  .content .guias {
+    top: 250px;
+  }
+
+  .content .tutoria {
+    top: 270px;
+    overflow: hidden;
+  }
+
+  .noticias .container-not {
+    padding: 0 20px;
+    display: flex;
+    overflow: auto;
+  }
+
+  .noticias .card:before {
+    content: url("../img/assets/onda-grande-m-r.svg");
+  }
+
+  .noticias .card {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 320px;
+    height: 435px;
+    overflow: hidden;
+  }
+
+  .noticias .card img {
+    object-fit: cover;
+    object-position: center;
+    max-width: 100%;
+    height: 435px;
+  }
+
+  .noticias .secundaria:before {
+    content: url("../img/assets/onda-grande-m-ro.svg");
+  }
+
+  .noticias .principal:before {
+    content: url("../img/assets/onda-grande.svg");
+  }
+
+  .foruns__container {
+    overflow: hidden;
+  }
+
+  .foruns__container:before {
+    left: -300px;
+  }
+
+  .foruns__content:before {
+    display: none;
+  }
+
+  .artigos .default__container {
+    padding: 0 20px;
+  }
+
+  .artigos .container-artigos {
+    padding: 0 20px;
+    overflow: auto;
+  }
+
+  .auloes .default__container {
+    padding: 0 20px;
+  }
+
+  .auloes__container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .auloes__container .slick-list {
+    margin: 0 -10px;
+  }
+
+  .auloes__container .slick-list .slick-slide {
+    width: 265px;
+  }
+
+  .auloes__container .card {
+    max-width: unset;
+    margin: 0 10px;
+  }
+
+  .midia .container-midia .mic {
+    display: none;
+  }
+
+  .midia .container-midia {
+    flex-direction: column;
+    gap: 38px;
+    padding: 0 20px;
+    display: flex;
+  }
+
+  .midia .card {
+    z-index: 5;
+    position: relative;
+  }
+
+  .midia .card .small-category {
+    max-width: 380px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .midia .card .socials {
+    bottom: unset;
+    top: 35px;
+    right: 10px;
+  }
+
+  .midia .card .socials__list {
+    gap: 5px;
+  }
+
+  .midia .card .socials__list a {
+    width: 24px;
+    height: 24px;
+  }
+
+  .midia .card .socials__list a img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .midia .podcast {
+    background-position: 0;
+  }
+
+  .midia .videos {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .midia .participe__container:before {
+    left: -340px;
+  }
+
+  .midia .participe__content:before {
+    display: none;
+  }
+
+  .especial__container {
+    flex-direction: column;
+    padding: 0 20px;
+    position: relative;
+  }
+
+  .especial__container .card {
+    background: url("../img/assets/fundo-ies.svg") center / cover no-repeat;
+    height: 583px;
+    padding: 47px 23px;
+    position: sticky;
+    top: 200px;
+  }
+
+  .especial__container .card.curriculo {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .dep .default__container {
+    padding: 0 20px;
   }
 }
 /*# sourceMappingURL=styles.044e704e.css.map */

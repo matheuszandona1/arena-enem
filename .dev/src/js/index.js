@@ -165,7 +165,7 @@ $(".auloes__container").slick({
 	dots: true,
 	responsive: [
 		{
-			breakpoint: 767,
+			breakpoint: 1024,
 			settings: "unslick",
 		},
 		{
@@ -177,39 +177,15 @@ $(".auloes__container").slick({
 				variableWidth: true,
 			},
 		},
+		{
+			breakpoint: 900,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2,
+				dots: true,
+			},
+		},
 	],
-})
-
-// Inicializa o slider quando a página é carregada
-$(document).ready(function () {
-	var width = $(window).width()
-
-	if (width <= 1200) {
-		$(".seu-slider").slick({
-			slidesToShow: 8,
-			unslick: true,
-
-			autoplay: true,
-			mobileFirst: true, //add this one
-			responsive: [
-				{
-					breakpoint: 1024,
-					settings: {
-						unslick: true,
-					},
-				},
-				{
-					breakpoint: 480,
-					settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1,
-						infinite: true,
-						dots: true,
-					},
-				},
-			],
-		})
-	}
 })
 
 $("html").mousemove(function (e) {
@@ -257,13 +233,14 @@ document.addEventListener("scroll", function () {
 	})
 })
 
-document.addEventListener("scroll", function () {
-	var scrollPosition = window.scrollY
-	console.log("Posição do Scroll: ", scrollPosition)
-})
-
 // Selecionar todos os elementos com a classe 'nav-link'
 const navLinks = document.querySelectorAll(".nav-link")
+
+// Variável para rastrear se o scroll foi iniciado por um clique
+let initiatedByClick = false
+
+// Variável para contar os scrolls que não foram iniciados por cliques
+let manualScrollCount = 0
 
 // Adicionar evento de clique a cada link
 navLinks.forEach((link) => {
@@ -273,5 +250,31 @@ navLinks.forEach((link) => {
 
 		// Adicionar a classe 'bold' ao link clicado
 		this.classList.add("bold")
+
+		// Indicar que o scroll foi iniciado por clique
+		initiatedByClick = true
+
+		// Definir um timeout para resetar a flag após o término esperado do scroll
+		setTimeout(() => {
+			initiatedByClick = false
+		}, 500) // O tempo pode precisar de ajuste baseado no comportamento do scroll
 	})
+})
+
+// Adicionar evento de scroll para tratar a remoção da classe 'bold'
+window.addEventListener("scroll", () => {
+	if (!initiatedByClick) {
+		// Apenas contar scrolls manuais
+		manualScrollCount++
+		if (manualScrollCount === 2) {
+			// Se for o segundo scroll manual
+			// Remover a classe 'bold' de todos os links
+			navLinks.forEach((link) => link.classList.remove("bold"))
+			// Resetar contagem de scroll manual
+			manualScrollCount = 0
+		}
+	} else {
+		// Se foi iniciado por clique, resetar a contagem
+		manualScrollCount = 0
+	}
 })
