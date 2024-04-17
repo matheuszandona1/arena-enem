@@ -21,6 +21,9 @@
 					right: 0;
 					height: auto;
 					top: 20px;
+					@include media(s) {
+						display: none;
+					}
 				}
 			}
 			&-collapse {

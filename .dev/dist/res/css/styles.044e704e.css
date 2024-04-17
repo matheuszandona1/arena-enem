@@ -1252,6 +1252,7 @@ html {
 }
 
 .artigos .container-artigos {
+  gap: 20px;
   max-width: 1120px;
   margin: 0 auto;
   padding: 20px 17px;
@@ -1263,7 +1264,6 @@ html {
   border-radius: 24px;
   flex-shrink: 0;
   width: 352px;
-  margin: 0 10px;
   padding-bottom: 40px;
   position: relative;
   overflow: hidden;
@@ -2002,6 +2002,10 @@ html {
     background-color: #0000;
   }
 
+  .header__container .navbar-expand-lg .navbar-toggler {
+    display: none;
+  }
+
   .header__container .navbar-collapse {
     background-color: var(--rosa);
     border-radius: 16px;
@@ -2225,8 +2229,12 @@ html {
     background-image: url("../img/assets/noticias.svg");
   }
 
+  .noticias {
+    padding-left: 20px;
+  }
+
   .noticias .container-not {
-    padding: 0 20px;
+    padding-bottom: 20px;
     display: flex;
     overflow: auto;
   }
@@ -2343,7 +2351,12 @@ html {
     background-image: url("../img/assets/artigos.svg");
   }
 
+  .artigos {
+    padding-left: 20px;
+  }
+
   .artigos .container-artigos {
+    padding: 0 0 20px;
     overflow: auto;
   }
 
@@ -2748,8 +2761,12 @@ html {
     overflow: hidden;
   }
 
+  .noticias {
+    padding-left: 20px;
+  }
+
   .noticias .container-not {
-    padding: 0 20px;
+    padding-bottom: 20px;
     display: flex;
     overflow: auto;
   }
@@ -2757,12 +2774,13 @@ html {
   .noticias .container-not::-webkit-scrollbar-track {
     background-color: #f5f5f5;
     border-radius: 10px;
+    scroll-padding: 20px;
     -webkit-box-shadow: inset 0 0 6px #0000001a;
   }
 
   .noticias .container-not::-webkit-scrollbar {
     background-color: #f5f5f5;
-    width: 10px;
+    width: 5px;
   }
 
   .noticias .container-not::-webkit-scrollbar-thumb {
@@ -2815,7 +2833,7 @@ html {
   }
 
   .artigos .container-artigos {
-    padding: 0 20px;
+    padding: 0 0 20px;
     overflow: auto;
   }
 
