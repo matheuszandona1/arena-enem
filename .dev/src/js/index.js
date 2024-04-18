@@ -171,7 +171,7 @@ $(".auloes__container").slick({
 		{
 			breakpoint: 480,
 			settings: {
-				slidesToShow: 1,
+				slidesToShow: 2,
 				slidesToScroll: 1,
 				dots: true,
 				variableWidth: true,
@@ -181,6 +181,7 @@ $(".auloes__container").slick({
 			breakpoint: 900,
 			settings: {
 				slidesToShow: 2,
+				variableWidth: true,
 				slidesToScroll: 2,
 				dots: true,
 			},

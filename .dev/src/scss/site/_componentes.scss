@@ -193,14 +193,14 @@
 
 		position: absolute;
 		left: -160px;
-		@media (max-width: 1281px) {
+		@media (max-width: 1367px) {
 			transform: scale(0.5);
 			left: -120px;
 		}
 		@include media(s) {
-			left: 10px;
+			left: 10px !important;
 			top: 5px;
-
+			transform: unset !important;
 			content: "";
 			background-image: url("../assets/noticias.svg");
 			background-repeat: no-repeat;
