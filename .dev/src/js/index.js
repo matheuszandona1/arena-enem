@@ -162,6 +162,8 @@ $(".auloes__container").slick({
 	slidesToShow: 1,
 	arrows: false,
 	mobileFirst: true,
+	centerMode: true,
+
 	dots: true,
 	responsive: [
 		{

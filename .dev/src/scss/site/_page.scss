@@ -256,6 +256,7 @@
 						max-width: 100%;
 						display: block;
 						word-wrap: break-word;
+						text-wrap: balance;
 					}
 					@include media(s) {
 						font-size: 14px;
@@ -1192,9 +1193,8 @@
 			padding: 0 20px;
 			.slick-list {
 				margin: 0 -10px;
-				.slick-slide {
-					width: 265px;
-				}
+				padding: 0;
+				padding-left: 10px !important;
 			}
 		}
 		@include media(m) {
@@ -1225,7 +1225,7 @@
 			position: relative;
 			cursor: pointer;
 			@include media(s) {
-				margin: 0 50px;
+				margin: 0 10px;
 				max-width: unset;
 			}
 			@include media(m) {
@@ -1276,10 +1276,13 @@
 					right: 5px;
 					height: 36px;
 					@include media(s) {
-						right: 5px;
+						right: 10px;
 					}
 					@media (min-width: 400px) {
-						right: 30px;
+						right: 20%;
+					}
+					@media (min-width: 500px) {
+						right: 5px;
 					}
 				}
 			}

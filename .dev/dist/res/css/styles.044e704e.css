@@ -738,6 +738,7 @@ html {
 
 .storiesHolder .stories .story .item-link .info strong {
   word-wrap: break-word;
+  text-wrap: balance;
   max-width: 100%;
   display: block;
 }
@@ -2430,19 +2431,17 @@ html {
 
   .auloes__container .slick-list {
     margin: 0 -10px;
-  }
-
-  .auloes__container .slick-list .slick-slide {
-    width: 265px;
+    padding: 0;
+    padding-left: 10px !important;
   }
 
   .auloes__container .card {
     max-width: unset;
-    margin: 0 50px;
+    margin: 0 10px;
   }
 
   .auloes__container .card .auloes__date .hour {
-    right: 5px;
+    right: 10px;
   }
 
   .midia {
@@ -2977,7 +2976,13 @@ html {
 
 @media (width >= 400px) {
   .auloes__container .card .auloes__date .hour {
-    right: 30px;
+    right: 20%;
+  }
+}
+
+@media (width >= 500px) {
+  .auloes__container .card .auloes__date .hour {
+    right: 5px;
   }
 }
 /*# sourceMappingURL=styles.044e704e.css.map */
